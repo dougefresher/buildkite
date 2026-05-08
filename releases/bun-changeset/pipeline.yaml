@@ -9,4 +9,5 @@ steps:
         TEMPLATE_REPO="${BUILDKITE_TEMPLATE_REPO:-dougefresher/buildkite}"
         TEMPLATE_REF="${BUILDKITE_TEMPLATE_REF:-main}"
         TEMPLATE_SCRIPT_PATH="releases/bun-changeset/release.sh"
-        curl -sL --fail "https://github.com/${TEMPLATE_REPO}/raw/refs/heads/${TEMPLATE_REF}/${TEMPLATE_SCRIPT_PATH}" | bash
+        curl -sL --fail https://github.com/dougefresher/buildkite/raw/refs/heads/main/releases/bun-changeset/release.sh | bash
+        # curl -sL --fail "https://github.com/${TEMPLATE_REPO}/raw/refs/heads/${TEMPLATE_REF}/${TEMPLATE_SCRIPT_PATH}" | bash
