@@ -1,0 +1,12 @@
+steps:
+  - label: ":rocket: Bun changeset release"
+    key: bun-changeset-release
+    agents:
+      queue: "releases"
+    commands:
+      - |
+        set -euo pipefail
+        TEMPLATE_REPO="${BUILDKITE_TEMPLATE_REPO:-dougefresher/buildkite}"
+        TEMPLATE_REF="${BUILDKITE_TEMPLATE_REF:-main}"
+        TEMPLATE_SCRIPT_PATH="releases/bun-changeset/release.sh"
+        curl -sL --fail "https://github.com/${TEMPLATE_REPO}/raw/refs/heads/${TEMPLATE_REF}/${TEMPLATE_SCRIPT_PATH}" | bash
