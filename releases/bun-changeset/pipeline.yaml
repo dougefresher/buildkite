@@ -3,6 +3,7 @@ steps:
     key: bun-changeset-release
     agents:
       queue: "releases"
+    image: "ghcr.io/carteramesh/docker/ubuntu:latest"
     commands:
       - |
         set -euo pipefail
